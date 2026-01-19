@@ -3,7 +3,7 @@ const teste = (txt?: string): void=>{
 }
 teste()
 
-const soma=(n1:number[]):number{
+const soma=(n1:number[]):number=>{
    let s: number = 0;
     n1.forEach((e)=>{
         s += e;
