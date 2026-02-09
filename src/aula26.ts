@@ -1,12 +1,12 @@
-class Conta{
-    protected numero: number
+abstract class Conta{
+    protected readonly numero: number
     protected titular: string
     private saldoconta: number
 
     constructor(titular: string){
         this.numero = this.gerarNumero()
         this.titular = titular
-        this.saldoconta = 0
+        this.saldoconta = 0  
     }
 
       gerarNumero():number{
@@ -127,7 +127,6 @@ class ContaPJ extends Conta{
 const cont1  = new ContaPF(1234567910,"paulo")
 const cont2  = new ContaPJ(4665454,"luis")
 
-
 cont2.deposito(800)
 cont2.deposito(800)
 
@@ -139,5 +138,5 @@ console.log(cont1.saldo)
 //.log(cont2.saldo())
 
 //const c1 = new Conta(2530, "marcos")
-//cont1.info()
-//cont2.info()
+cont1.info()
+//cont2.info() 
