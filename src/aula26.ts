@@ -50,17 +50,28 @@ abstract class Conta{
         }
     }
 
-
-
 } 
 
-class ContaPF extends Conta{
+      interface Tributos{
+        taxaCalculo: number;
+        CalcularTributos(valor:number): number;
+    }
+
+
+class ContaPF extends Conta implements Tributos{
+
+    taxaCalculo = 10
+
     cpf: number
 
     constructor(cpf:number,titular: string){
         super(titular)
         this.cpf = this.gerarNumero()
         
+    }
+
+    CalcularTributos(valor: number): number {
+        return valor * this.taxaCalculo
     }
 
     info(){
