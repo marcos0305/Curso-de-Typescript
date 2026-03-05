@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.person = void 0;
+exports.date = exports.Coisas = void 0;
+const Coisas = ["cadeira", "chave", "mesa"];
+exports.Coisas = Coisas;
 class person {
     name;
     height;
@@ -9,5 +11,12 @@ class person {
         this.height = height;
     }
 }
-exports.person = person;
+class date {
+    date;
+    constructor(date) {
+        this.date = date;
+    }
+}
+exports.date = date;
+exports.default = person;
 //# sourceMappingURL=classes.js.map

@@ -1,4 +1,5 @@
-export class person{
+const Coisas=["cadeira", "chave", "mesa"]
+class person{
     name: string
     height: number
 
@@ -7,3 +8,12 @@ export class person{
         this.height=height
     }
 }
+class date{
+    date: number
+
+    constructor(date: number){
+        this.date=date
+    }
+}
+export default person
+export {Coisas,date}
