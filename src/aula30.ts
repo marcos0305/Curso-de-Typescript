@@ -1,4 +1,4 @@
-import { person } from "./classes";
+import person from "./classes";
 
 const p1 = new person("marcos", 54)
 
